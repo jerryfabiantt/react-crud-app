@@ -36,7 +36,7 @@ To run the project
 To build the project in Production mode
 
 ```bash
- npm run buld 
+ npm run build 
 ```
 
 
