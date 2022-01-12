@@ -1,0 +1,333 @@
+/*!
+
+ =========================================================
+ * Paper Dashboard React - v1.3.0 based on Paper Dashboard 2 - v2.0.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/paper-dashboard-2
+ * Copyright 2021 Creative Tim (http://www.creative-tim.com)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import 'paper-dashboard/variables';
+@import 'paper-dashboard/mixins';
+// Plugins CSS
+@import "paper-dashboard/plugins/plugin-animate-bootstrap-notify";
+@import "paper-dashboard/plugins/plugin-perfect-scrollbar";
+// Core CSS
+@import "paper-dashboard/buttons";
+@import "paper-dashboard/inputs";
+@import "paper-dashboard/typography";
+@import "paper-dashboard/misc";
+@import "paper-dashboard/checkboxes-radio";
+// components
+@import "paper-dashboard/navbar";
+@import "paper-dashboard/page-header";
+@import "paper-dashboard/dropdown";
+@import "paper-dashboard/alerts";
+@import "paper-dashboard/images";
+@import "paper-dashboard/nucleo-outline";
+@import "paper-dashboard/tables";
+@import "paper-dashboard/sidebar-and-main-panel";
+@import "paper-dashboard/footers";
+@import "paper-dashboard/fixed-plugin";
+// cards
+@import "paper-dashboard/cards";
+@import "paper-dashboard/cards/card-plain";
+@import "paper-dashboard/cards/card-chart";
+@import "paper-dashboard/cards/card-user";
+@import "paper-dashboard/cards/card-map";
+@import "paper-dashboard/cards/card-stats";
+@import "paper-dashboard/responsive";
+// html to react differences
+@import "paper-dashboard/react/react-differences.scss";
+.login-page {
+    background: linear-gradient(#464646, rgba(43, 39, 39, 0.85));
+    overflow-x: hidden;
+    background-color: #464646;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    padding: 150px;
+}
+
+.login-page::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pattern.png') #212120 repeat center !important;
+    opacity: .05;
+}
+
+.sidebar[data-color="black"]::after {
+    background: url('../img/pattern.png') !important;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(33, 33, 32, 0.97);
+}
+
+.sidebar[data-color="black"] {
+    background: url('../img/pattern.png') #212120 repeat center !important;
+}
+
+.welcome-text {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.card-user {
+    width: 30rem;
+    padding: 10px;
+}
+
+.login-logo {
+    width: 60%;
+}
+
+.error_msg_color {
+    color: $danger-color;
+}
+
+.allowed-footer {
+    border: 1px solid #DDDDDD;
+    padding: 5px;
+    border-radius: 0.25rem;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.modal-backdrop.show {
+    opacity: 0.15 !important;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+button.close {
+    padding: 0;
+    background-color: initial;
+    border: 0;
+}
+
+.mr-custom {
+    margin-right: 1rem !important;
+}
+
+.delete-icon {
+    color: #fff;
+    background-color: $danger-color;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    border: none !important;
+}
+
+.loader-gif {
+    display: flex;
+    margin: 0 auto !important;
+}
+
+.subloader-gif {
+    display: flex;
+    margin: 0 auto !important;
+    width: 10%;
+}
+
+.sidebar-gif {
+    padding-top: 20%;
+    padding-left: 40%;
+}
+
+.no_data {
+    display: flex;
+    justify-content: center;
+}
+
+.tick {
+    width: 25px;
+}
+
+.table {
+    font-size: 15px !important;
+}
+
+.react-pagination-js-default .page {
+    display: inline-block;
+    padding: 3px 8px !important;
+    margin-right: 4px;
+    border-radius: 3px;
+    border: solid 1px #c0c0c0;
+    background: white !important;
+    box-shadow: none !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: black !important;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.react-pagination-js-default .is-active {
+    display: inline-block;
+    padding: 3px 8px !important;
+    margin-right: 4px;
+    border-radius: 3px !important;
+    border: 1px solid $primary-color !important;
+    background: $primary-color !important;
+    box-shadow: none !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f0f0f0;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+
+/* Main Classes */
+
+
+/* Large checkboxes */
+
+.myinput.large {
+    height: 16px;
+    width: 16px;
+    border-radius: 50% !important;
+    vertical-align: middle !important;
+    border: 1px solid rgb(151, 146, 146) !important;
+    appearance: none;
+    cursor: pointer;
+}
+
+.myinput.large:checked {
+    background-color: #fff;
+    border: 6px solid rgb(40, 167, 69) !important;
+}
+
+.myinput.large[type="checkbox"]:before {
+    width: 20px;
+    height: 20px;
+}
+
+.myinput.large[type="checkbox"]:after {
+    top: -20px;
+    width: 16px;
+    height: 16px;
+}
+
+.bg-roles-tab {
+    background-color: #e8e8e862 !important;
+    padding-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+.fa-close {
+    font-size: 25px !important;
+    color: rgba(220, 53, 69, 0.973) !important;
+    display: flex;
+    justify-content: start;
+}
+
+.fa-check {
+    font-size: 25px !important;
+    color: rgb(40, 167, 69) !important;
+    display: flex;
+    justify-content: start;
+}
+
+.react-pagination-js-default .is-active {
+    display: inline-block;
+    padding-top: 2px !important;
+    padding-bottom: 3px !important;
+    padding-left: 8.5px !important;
+    padding-right: 9px !important;
+    margin-right: 4px;
+    border: 1px solid #28a745 !important;
+    background: #28a745 !important;
+    box-shadow: none !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f0f0f0;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 50% !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.react-pagination-js-default .page {
+    display: inline-block;
+    padding-top: 2px !important;
+    padding-bottom: 3px !important;
+    padding-left: 8.5px !important;
+    padding-right: 9px !important;
+    margin-right: 4px;
+    border: solid 1px #c0c0c0;
+    background: #f4f3ef !important;
+    box-shadow: none !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: black !important;
+    text-shadow: 0px 1px 0px white;
+    cursor: pointer;
+    border-radius: 50% !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+.bg-success {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-success-rgb),var(--bs-bg-opacity))!important;
+}
+.bg-warning {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-warning-rgb),var(--bs-bg-opacity))!important;
+}
+.bg-danger {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-danger-rgb),var(--bs-bg-opacity))!important;
+}
+.bg-info {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-info-rgb),var(--bs-bg-opacity))!important;
+}
+.hidePrintSession{
+    display: none !important;
+}
